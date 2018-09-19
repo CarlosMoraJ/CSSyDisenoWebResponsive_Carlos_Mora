@@ -7,15 +7,36 @@ body {
   background-color: #02010a;
   font-family: 'DancingScript';
 }
+
+#contenido {
+  width: 900px;
+  margin: 0 auto;
+  animation-name: rebote;
+  animation-duration: 1.3s;
+}
+
 *{
   margin: 0;
 }
-
+@-webkit-keyframes rebote {
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+/*De aquí hacia abajo se muestra el código de la cabecera y del menú de vínculos*/
 a:link, a:visited {
   color: white;
+  font-size: 1.3em;
   text-decoration: underline;
   text-underline-position: under;
 }
+
 a[class="current"]:link, a[class="current"]:visited
 /*Esta es una forma alternativa a los selectores de arriba*/
 /*a.current:link, a.current:visited */
@@ -24,106 +45,154 @@ a[class="current"]:link, a[class="current"]:visited
     color: white;
   }
 
-  #contenido {
-    width: 900px;
-    margin: 0 auto;
-  }
   .contenedor {
-    /*display: flex;
-    flex-direction: row;*/
-    height: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background: #5b7989;
     border-radius: 10px 10px 0px 0px;
   }
-  .contenedor h1{
-    display: inline-block;
+
+  h1 {
     color: white;
-    text-shadow: 2px 2px #02010a;
     width: 50%;
-    /*float: left;*/
+    float: left;
     box-sizing: border-box;
     padding: 2%;
-    height: 100%;
-
-
-
   }
-  .contenedor nav {
+
+  nav {
     width: 50%;
-    display: inline-block;
+    float: right;
     box-sizing: border-box;
-    padding: 2%;
-    height: 70px;
-    height: 100%;
-
-    /*padding: 2%;*/
-    /*float: left;*/
   }
-  nav ul {
+
+ ul {
     list-style-type: none;
-    /*display: flex;
-    flex-direction: row;
-    float: right;*/
-    font-size: 1.4em;
-  }
- ul > li{
+    height: 100%;
     display: flex;
     flex-direction: row;
     float: right;
-    margin: auto 15px;
+    box-sizing: border-box;
+    padding: 2%;
   }
+
+ li{
+    margin: auto 15px;
+
+  }
+/*De aquí hacia abajo se muestra el código de la sección de imágenes*/
   #paisaje {
-
     background: #82c3a6;
-    padding: 10%;
-
+    padding: 7%;
   }
   #paisaje img {
     width: 100%;
     border: 2px solid black;
   }
-  #linkpaisaje img {
-    width: 50%;
-    border: 2px solid black;
-    text-align: center;
-
-  }
-  #linkretrato img {
-      width: 50%;
-      border: 2px solid black;
-      text-align: center;
-
+  figcaption a:link, figcaption a:visited {
+    color: black;
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-underline-position: under;
   }
   .links {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background: #d5c75f;
-
-  /*  flex-direction: row;*/
+    width: 100%;
   }
+  picture {
+    width: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 4%;
+  }
+  picture > img {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px black;
+  }
+  #linkpaisaje img {
+    transition-property: transform;
+    transition-duration: 1s;
+  }
+  #linkpaisaje img:hover {
+    transform: rotate(10deg);
+  }
+  #linkretrato img {
+    transition-property: transform;
+    transition-duration: 1s;
+  }
+  #linkretrato img:hover {
+    transform: translate(20px,-5px);
+  }
+
+/*De aquí hacia abajo se muestra el código del pie de página*/
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #c6d5c5;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+.tabla {
+  width: 25%;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.tabla img{
+  vertical-align: middle;
+}
+
+table th {
+  font-size: 1.8em;
+  text-align: left;
+}
+table td {
+  font-size: 1.2em;
+}
+table td a:link {
+  color: black;
+}
+
 
 @media (max-width: 900px){
   #contenido {
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
   }
-  .contenedor {
-    display: block;
-    /*flex-direction: column;*/
-  }
-  .contenedor h1 {
+  /*Código para cabecera y menú de vínculos*/
+  h1 {
     width: 100%;
     text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   nav {
     width: 100%;
-    text-align: center;
   }
-  nav ul {
-    box-sizing: border-box;
-    float: none;
-    text-align: center;
+  ul {
     width: 100%;
+    padding-top: 0;
+    padding-bottom: 2em;
   }
-
-
+  li {
+    width: 100%;
+    text-align: center;
+  }
+  /*Código para sección de imágenes*/
+  picture {
+    width: 100%;
+    padding: 7%;
+  }
+  /*Código para pie de página*/
+  .tabla {
+    width: 100%;
+    margin-left: 5%;
+  }
 }
