@@ -8,14 +8,20 @@ body {
   font-family: 'DancingScript';
 }
 
+#contenido {
+  width: 900px;
+  margin: 0 auto;
+}
+
 *{
   margin: 0;
 }
-
+/*De aquí hacia abajo se muestra el código de la cabecera y del menú de vínculos*/
 a:link, a:visited {
   color: white;
+  font-size: 1.3em;
   text-decoration: underline;
-  /*text-underline-position: under;*/
+  text-underline-position: under;
 }
 
 a[class="current"]:link, a[class="current"]:visited
@@ -26,10 +32,7 @@ a[class="current"]:link, a[class="current"]:visited
     color: white;
   }
 
-  #contenido {
-    width: 900px;
-    margin: 0 auto;
-  }
+
 
   .contenedor {
     display: flex;
@@ -65,8 +68,79 @@ a[class="current"]:link, a[class="current"]:visited
 
  li{
     margin: auto 15px;
-    font-size: 1.3em;
+
   }
+/*De aquí hacia abajo se muestra el código de la sección de imágenes*/
+  #paisaje {
+    background: #82c3a6;
+    padding: 7%;
+  }
+  #paisaje img {
+    width: 100%;
+    border: 2px solid black;
+  }
+  figcaption a:link, figcaption a:visited {
+    color: black;
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #d5c75f;
+    width: 100%;
+  }
+  picture {
+    width: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 4%;
+  }
+  #linkpaisaje {
+
+
+  }
+  #linkretrato {
+
+  }
+  picture > img {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px black;
+
+  }
+/*De aquí hacia abajo se muestra el código del pie de página*/
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #c6d5c5;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+.tabla {
+  width: 25%;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.tabla img{
+  vertical-align: middle;
+}
+
+table th {
+  font-size: 1.8em;
+  text-align: left;
+}
+table td {
+  font-size: 1.2em;
+}
+table td a:link {
+  color: black;
+}
 
 
 @media (max-width: 900px){
@@ -74,6 +148,7 @@ a[class="current"]:link, a[class="current"]:visited
     width: 100%;
     margin: 0 auto;
   }
+  /*Código para cabecera y menú de vínculos*/
   h1 {
     width: 100%;
     text-align: center;
@@ -92,34 +167,14 @@ a[class="current"]:link, a[class="current"]:visited
     width: 100%;
     text-align: center;
   }
+  /*Código para sección de imágenes*/
+  picture {
+    width: 100%;
+    padding: 7%;
+  }
+  /*Código para pie de página*/
+  .tabla {
+    width: 100%;
+    margin-left: 5%;
+  }
 }
-
-
-/*#paisaje {
-
-  background: #82c3a6;
-  padding: 10%;
-
-}
-#paisaje img {
-  width: 100%;
-  border: 2px solid black;
-}
-#linkpaisaje img {
-  width: 50%;
-  border: 2px solid black;
-  text-align: center;
-
-}
-#linkretrato img {
-    width: 50%;
-    border: 2px solid black;
-    text-align: center;
-
-}
-.links {
-  display: flex;
-  background: #d5c75f;
-
-  flex-direction: row;
-}*/
