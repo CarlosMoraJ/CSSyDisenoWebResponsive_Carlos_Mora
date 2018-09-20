@@ -1,0 +1,46 @@
+/*Esta hoja estilos2.css define los estilos para la sección central
+de imágenes de las páginas paisajes.html y retratos.html, la cabecera y
+el pie de página están definidos en la hoja estilos.css */
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #d5c75f;
+}
+
+.agrupador {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.agrupador div {
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 2.5%;
+}
+
+.agrupador img {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .agrupador div {
+    width: 100%;
+    padding: 6%;
+  }
+}
+
+/*A continuación se aplican los filtros para las imagenes*/
+.imagen1 {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+.imagen2, .imagen4, .imagen6 {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.imagen3 {
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}

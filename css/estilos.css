@@ -8,16 +8,14 @@ body {
   font-family: 'DancingScript';
 }
 
-#contenido {
-  width: 900px;
-  margin: 0 auto;
-  animation-name: rebote;
-  animation-duration: 1.3s;
-}
-
 *{
   margin: 0;
 }
+img {
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px #02010a;
+}
+
 @-webkit-keyframes rebote {
   0%{
     margin-top: 150%;
@@ -29,6 +27,14 @@ body {
     margin-top: 0%;
   }
 }
+
+#contenido {
+  width: 900px;
+  margin: 0 auto;
+  animation-name: rebote;
+  animation-duration: 1.3s;
+}
+
 /*De aquí hacia abajo se muestra el código de la cabecera y del menú de vínculos*/
 a:link, a:visited {
   color: white;
@@ -52,21 +58,19 @@ a[class="current"]:link, a[class="current"]:visited
     background: #5b7989;
     border-radius: 10px 10px 0px 0px;
   }
-
   h1 {
     color: white;
     width: 50%;
     float: left;
     box-sizing: border-box;
     padding: 2%;
+    text-shadow: 2px 2px #02010a;
   }
-
   nav {
     width: 50%;
     float: right;
     box-sizing: border-box;
   }
-
  ul {
     list-style-type: none;
     height: 100%;
@@ -76,25 +80,17 @@ a[class="current"]:link, a[class="current"]:visited
     box-sizing: border-box;
     padding: 2%;
   }
-
  li{
     margin: auto 15px;
-
   }
+
 /*De aquí hacia abajo se muestra el código de la sección de imágenes*/
   #paisaje {
     background: #82c3a6;
-    padding: 7%;
+    padding: 6%;
   }
   #paisaje img {
     width: 100%;
-    border: 2px solid black;
-  }
-  figcaption a:link, figcaption a:visited {
-    color: black;
-    font-size: 1.2em;
-    text-decoration: underline;
-    text-underline-position: under;
   }
   .links {
     display: flex;
@@ -103,31 +99,39 @@ a[class="current"]:link, a[class="current"]:visited
     background: #d5c75f;
     width: 100%;
   }
+  figcaption a:link, figcaption a:visited {
+    color: black;
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
   picture {
     width: 50%;
     text-align: center;
     box-sizing: border-box;
     padding: 4%;
   }
-  picture > img {
+  picture img {
     width: 100%;
     box-sizing: border-box;
-    border: 2px solid black;
-    box-shadow: 5px 5px 5px black;
   }
   #linkpaisaje img {
-    transition-property: transform;
-    transition-duration: 1s;
+    transition-property: transform, box-shadow, border;
+    transition-duration: 1s, 1s, 1s;
   }
   #linkpaisaje img:hover {
     transform: rotate(10deg);
+    box-shadow: 5px 5px 5px #82c3a6;
+    border: 2px solid black;
   }
   #linkretrato img {
-    transition-property: transform;
-    transition-duration: 1s;
+    transition-property: transform, box-shadow, border;
+    transition-duration: 1s, 1s, 1s;
   }
   #linkretrato img:hover {
     transform: translate(20px,-5px);
+    box-shadow: 5px 5px 5px #82c3a6;
+    border: 2px solid black;
   }
 
 /*De aquí hacia abajo se muestra el código del pie de página*/
